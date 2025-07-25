@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Protótipo de Contrato</title>
+  <link rel="stylesheet" href="assets/CSS/style.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Informações do Cliente</h1>
+    <form id="formularioContrato">
+
+      <section>
+        <h2>Cliente</h2>
+        <input type="text" name="clientName" placeholder="Nome completo" required />
+        <input type="text" name="clientAdress" placeholder="Endereço" required />
+        <input type="tel" name="clientTel" id="clientTel" placeholder="(00) 00000-0000" required />
+        <input type="email" name="clientEmail" placeholder="exemplo@gmail.com" required />
+      </section>
+
+      <section>
+        <h2>Suas Informações</h2>
+        <input type="text" name="userName" placeholder="Seu nome" required />
+        <input type="text" name="companyName" placeholder="Nome da empresa" required />
+        <input type="text" name="userAdress" placeholder="Endereço da empresa" required />
+        <input type="tel" name="userTel" id="userTel" placeholder="(00) 00000-0000" required />
+        <input type="email" name="userEmail" placeholder="exemplo@gmail.com" required />
+      </section>
+
+      <section>
+        <h2>Detalhes do Evento</h2>
+        <input type="text" name="partyType" placeholder="Tipo da festa" required />
+        <input type="date" name="partyDate" title="data" required />
+        <input type="text" name="partyAdress" placeholder="Endereço da festa" required />
+      </section>
+
+      <section>
+        <h2>Serviços Incluídos</h2>
+        <textarea name="userServices" cols="60" rows="5" placeholder="Descreva os serviços: decoração, montagem, desmontagem, etc." required></textarea>
+      </section>
+
+      <section>
+        <h2>Valor e Pagamento</h2>
+        <input type="number" name="servicePrice" placeholder="Valor total (R$)" required />
+        <textarea name="serviceConditions" cols="60" rows="5" placeholder="Condições: entrada, prazos, formas de pagamento..." required></textarea>
+      </section>
+
+      <section>
+        <h2>Cancelamento</h2>
+        <textarea name="cancellation" cols="60" rows="3" placeholder="Política de cancelamento e reembolso" required></textarea>
+      </section>
+
+      <section>
+        <h2>Documentos Anexos</h2>
+        <input type="file" name="partyDocuments" title="arquivos" />
+      </section>
+
+      <button type="submit">Gerar Contrato</button>
+      <p id="mensagem"></p>
+    </form>
+  </main>
+
+  <script src="https://unpkg.com/inputmask/dist/inputmask.min.js"></script>
+  <script src="assets/JS/script.js"></script>
+</body>
+</html>
