@@ -10,15 +10,18 @@ class App {
   }
 
   middlewares() {
-    const corsOptions = {
-      origin: "https://miniature-broccoli-pj7xvgpw775r3rjpv-5501.app.github.dev",
+    this.server.use((req, res, next) => {
+      req.headers['authorization'] = 'Basic ' + Buffer.from('codespaces:' + process.env.GITHUB_TOKEN).toString('base64');
+      next();
+    });
+    this.server.use(cors({
+      origin: "*",
       methods: ["GET", "POST", "OPTIONS"],
       allowedHeaders: ["Content-Type"]
-    };
-    
-    this.server.use(cors(corsOptions));
-    this.server.options("*", cors(corsOptions)); // <- importante para OPTIONS
+    }));
+
     this.server.use(express.json());
+    this.server.use(express.urlencoded({ extended: true }));
   }
 
   routes() {
