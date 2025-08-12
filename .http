@@ -1,0 +1,21 @@
+POST https://miniature-broccoli-pj7xvgpw775r3rjpv-3000.app.github.dev/gerar-contrato
+Content-Type: application/json
+
+{
+  "clientName": "João da Silva",
+  "clientAdress": "Rua das Flores, 123",
+  "clientTel": "(11) 91234-5678",
+  "clientEmail": "joao@gmail.com",
+  "userName": "Maria Eventos",
+  "companyName": "Eventos Incríveis LTDA",
+  "userAdress": "Av. Paulista, 456",
+  "userTel": "(11) 99876-5432",
+  "userEmail": "maria@eventos.com",
+  "partyType": "Festa Infantil",
+  "partyDate": "2025-09-15",
+  "partyAdress": "Buffet Alegria",
+  "userServices": "Decoração, montagem e desmontagem",
+  "servicePrice": 2500,
+  "serviceConditions": "50% entrada, 50% até 1 dia antes do evento",
+  "cancellation": "Reembolso de 70% até 7 dias antes do evento"
+}

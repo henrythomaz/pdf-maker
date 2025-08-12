@@ -53,8 +53,18 @@
 
       <section>
         <h2>Documentos Anexos</h2>
-        <input type="file" name="partyDocuments" title="arquivos" />
+
+        <div class="file-input-group">
+          <label for="partyLogo">Logo da empresa</label>
+          <input type="file" name="partyLogo" id="partyLogo" accept="image/*" />
+        </div>
+
+        <div class="file-input-group">
+          <label for="partyItems">Lista de Itens</label>
+          <input type="file" name="partyItems" id="partyItems" multiple />
+        </div>
       </section>
+
 
       <button type="submit">Gerar Contrato</button>
       <p id="mensagem"></p>

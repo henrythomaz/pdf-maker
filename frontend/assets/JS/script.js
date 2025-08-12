@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
-  Inputmask({ mask: "(99) 99999-9999" }).mask("#clientTel");
-  Inputmask({ mask: "(99) 99999-9999" }).mask("#userTel");
+  const clientTelInput = document.querySelector("#clientTel");
+  if (clientTelInput) Inputmask({ mask: "(99) 99999-9999" }).mask(clientTelInput);
+  const userTelInput = document.querySelector("#userTel");
+  if (userTelInput) Inputmask({ mask: "(99) 99999-9999" }).mask(userTelInput);
+
 
   const form = document.getElementById("formularioContrato");
   const mensagem = document.getElementById("mensagem");
@@ -14,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
     try {
       mensagem.textContent = "Gerando contrato...";
 
-      const response = await fetch("http://localhost:3000/gerar-contrato", {
+      const response = await fetch("https://miniature-broccoli-pj7xvgpw775r3rjpv-3000.app.github.dev/gerar-contrato", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(dados),
